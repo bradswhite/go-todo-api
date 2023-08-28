@@ -27,7 +27,11 @@ func main() {
 	routes.AuthRoutes(app)
 	routes.TodoRoutes(app)
 
-	app.Use(cors.New())
+	//app.Use(cors.New())
+	app.Use(cors.New(cors.Config{
+		AllowCredentials: true,
+	}))
+
 	app.Use(func(c *fiber.Ctx) error {
 		return c.SendStatus(404)
 	})
