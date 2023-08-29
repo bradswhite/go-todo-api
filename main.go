@@ -29,8 +29,7 @@ func main() {
 
 	//app.Use(cors.New())
 	app.Use(cors.New(cors.Config{
-		AllowCredentials: true,
-		AllowOrigins: "https://bradscottwhite.github.io/todoer/",
+		AllowOrigins: "https://bradscottwhite.github.io",
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 
