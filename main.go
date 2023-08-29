@@ -28,8 +28,8 @@ func main() {
 	routes.TodoRoutes(app)
 
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "*",
-		AllowHeaders: "Origin, Content-Type, Accept",
+		//AllowOrigins: "*",
+		//AllowHeaders: "Origin, Content-Type, Accept",
 		AllowCredentials: true,
 	}))
 
