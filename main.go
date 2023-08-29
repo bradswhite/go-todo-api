@@ -30,6 +30,8 @@ func main() {
 	//app.Use(cors.New())
 	app.Use(cors.New(cors.Config{
 		AllowCredentials: true,
+		AllowOrigins: "https://bradscottwhite.github.io/todoer/",
+		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 
 	app.Use(func(c *fiber.Ctx) error {
