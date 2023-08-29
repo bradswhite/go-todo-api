@@ -27,10 +27,10 @@ func main() {
 	routes.AuthRoutes(app)
 	routes.TodoRoutes(app)
 
-	//app.Use(cors.New())
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "https://bradscottwhite.github.io",
+		AllowOrigins: "*",
 		AllowHeaders: "Origin, Content-Type, Accept",
+		AllowCredentials: true,
 	}))
 
 	app.Use(func(c *fiber.Ctx) error {
